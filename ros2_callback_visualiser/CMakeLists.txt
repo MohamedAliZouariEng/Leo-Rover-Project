@@ -26,6 +26,7 @@ install(PROGRAMS
   scripts/analise_trace_face_searcher_callbacks.py
   scripts/analise_trace_yellow_tshirt_callbacks.py
   scripts/analise_trace_plant_searcher_callbacks.py
+  scripts/analise_trace_green_callbacks.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

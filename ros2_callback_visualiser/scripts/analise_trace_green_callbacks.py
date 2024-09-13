@@ -20,7 +20,7 @@ from tracetools_analysis.processor.ros2 import Ros2Handler
 from tracetools_analysis.utils.ros2 import Ros2DataModelUtil
 
 # Here you set your data path
-path = os.path.expanduser('~/.ros/tracing/plant_detector')
+path = os.path.expanduser('~/.ros/tracing/green_detector')
 
 # Process
 events = load_file(path)
@@ -174,6 +174,7 @@ def add_durations_to_figure(
 
 ranges_listener_callback = get_sub_callback_ranges('listener_callback', '/leo/camera/image_raw', 'plant_detector_node')
 ranges_detect_plants_callback = get_service_callback_ranges('detect_plants_callback')
+ranges_detect_green_detector_callback = get_service_callback_ranges('detect_green_detector_callback')
 
 
 #########
@@ -181,6 +182,7 @@ ranges_detect_plants_callback = get_service_callback_ranges('detect_plants_callb
 segment_types = [
     'listener_callback',
     'detect_plants_callback',
+    'detect_green_detector_callback',
 ]
 
 start_time = "START TIME"
@@ -220,7 +222,20 @@ for index, item in enumerate(segment_types):
 else:
     print(f"'{search_string}' not found in the list")
 
+
+search_string = 'detect_green_detector_callback'
+num_pos_detect_green_detector_callback = None
+for index, item in enumerate(segment_types):
+    if search_string in item:
+        num_pos_detect_green_detector_callback = index
+        break
+else:
+    print(f"'{search_string}' not found in the list")
+
 add_durations_to_figure(fig, 'listener_callback', ranges_listener_callback, 'red', line_width, num_pos_listener_callback)
 add_durations_to_figure(fig, 'detect_plants_callback', ranges_detect_plants_callback, 'blue', line_width, num_pos_detect_plants_callback)
+add_durations_to_figure(fig, 'detect_green_detector_callback', ranges_detect_green_detector_callback, 'green', line_width, num_pos_detect_green_detector_callback)
+
+
 
 show(fig)
