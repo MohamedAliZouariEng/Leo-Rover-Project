@@ -1,0 +1,10 @@
+# Goal definition
+float64 rotation_time  # Rotation time in seconds
+
+---
+# Result definition
+bool success  # True if rotation was successful
+
+---
+# Feedback definition
+float64 elapsed_time  # Elapsed time in seconds

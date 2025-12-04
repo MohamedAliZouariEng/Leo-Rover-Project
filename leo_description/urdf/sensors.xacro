@@ -1,0 +1,106 @@
+<?xml version="1.0" ?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+
+  <xacro:macro name="laser_scan" params="robot_name parent_name origin_xyz sensor_YAW">
+      <link name="${robot_name}_laser_scan_model_link">
+        <visual name="${robot_name}_visual_laser_scan_link">
+          <origin rpy="0 0 0" xyz="0 0 0"/>
+          <geometry>
+            <mesh filename="package://leo_description/meshes/laser.dae" scale="1.0 1.0 1.0"/>
+          </geometry>
+        </visual>
+
+        <collision name="${robot_name}_collision_laser_scan_link">
+          <origin rpy="0 0 0" xyz="0 0 0.0098125"/>
+          <geometry>
+            <cylinder length="0.019625" radius="0.03"/>
+          </geometry>
+        </collision>
+
+        <inertial>
+
+          <mass value="0.01"/>
+          <origin rpy="0 0 0" xyz="0 0 0.0098125"/>
+          <inertia ixx="2.5709505208333336e-06" ixy="0" ixz="0" iyy="2.5709505208333336e-06" iyz="0" izz="4.5e-06"/>
+        </inertial>
+      </link>
+
+
+    <joint name="${robot_name}_laser_scan_model_link_joint" type="fixed">
+        <origin xyz="${origin_xyz}" rpy="0 0 ${sensor_YAW}" />
+        <parent link="${parent_name}" />
+        <child link="${robot_name}_laser_scan_model_link" />
+    </joint>
+
+    <link name="${robot_name}_laser_scan_frame">
+    </link>
+
+    <joint name="${robot_name}_laser_scan_frame_joint" type="fixed">
+        <origin xyz="0 0 0.03" rpy="0 0 ${sensor_YAW}" />
+        <parent link="${robot_name}_laser_scan_model_link" />
+        <child link="${robot_name}_laser_scan_frame" />
+    </joint>
+    
+    
+    
+    <gazebo reference="${robot_name}_laser_scan_frame">
+      <sensor name="lidar_sensor" type="gpu_lidar">
+        <pose>0 0 0 0 0 0</pose>
+        <topic>scan</topic>
+        <update_rate>10.0</update_rate>
+        <always_on>true</always_on>
+        <visualize>true</visualize>
+        <enable_metrics>true</enable_metrics> 
+        <ray>
+          <scan>
+            <horizontal>
+              <samples>200</samples>
+              <resolution>1.0</resolution>
+              <min_angle>-2.2</min_angle>
+              <max_angle>2.2</max_angle>
+            </horizontal>
+          </scan>
+          <range>
+            <min>0.1</min>
+            <max>20.0</max>
+          </range>
+        </ray>
+        <gz_frame_id>${robot_name}_laser_scan_frame</gz_frame_id>
+      </sensor>
+    </gazebo>
+    <!--
+    <gazebo reference="${robot_name}_laser_scan_frame">
+      <sensor name="sensor_ray" type="ray">
+          <pose>0 0 0 0 0 0</pose>
+          <ray>
+            <scan>
+              <horizontal>
+                <samples>200</samples>
+                <resolution>1.0</resolution>
+                <min_angle>-2.2</min_angle>
+                <max_angle>2.2</max_angle>
+              </horizontal>
+            </scan>
+            <range>
+              <min>0.1</min>
+              <max>20.0</max>
+            </range>
+          </ray>
+          <always_on>true</always_on>
+          <visualize>true</visualize>
+          <update_rate>10.0</update_rate>
+          <plugin name="laser" filename="libgazebo_ros_ray_sensor.so">
+            <ros>
+              <namespace>${robot_name}</namespace>
+              <remapping>~/out:=laser_scan</remapping>
+            </ros>
+            <frame_name>${robot_name}_laser_scan_frame</frame_name>
+            <output_type>sensor_msgs/LaserScan</output_type>
+          </plugin>
+        </sensor>
+    </gazebo>
+    -->
+  </xacro:macro>
+
+</robot>
