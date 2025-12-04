@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<sdf version='1.4'>
+  <model name="space_terrain">
+      <static>1</static>
+      <link name='link'>
+        <visual name='visual'>
+          <geometry>
+          <heightmap>
+            <use_terrain_paging>false</use_terrain_paging>
+            <uri>model://space_terrain/meshes/marsyard2022_terrain_hm.tif</uri>
+            <pos>0 0 0</pos>
+            <size>50 50 4.820803273566</size>
+            <texture>
+              <diffuse>model://space_terrain/meshes/marsyard2022_terrain_texture.png</diffuse>
+              <normal>model://space_terrain/meshes/flat_normal.png</normal>
+              <size>50</size>
+            </texture>
+          </heightmap>
+        </geometry>
+        </visual>
+        <collision name='collision'>
+          <laser_retro>0</laser_retro>
+          <max_contacts>10</max_contacts>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://space_terrain/meshes/terrain.stl</uri>
+              <scale>0.5 0.5 0.5</scale>
+            </mesh>
+          </geometry>
+       </collision>
+
+        <velocity_decay>
+          <linear>0.000000</linear>
+          <angular>0.000000</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>        
+      </link>   
+  </model>
+</sdf>
+

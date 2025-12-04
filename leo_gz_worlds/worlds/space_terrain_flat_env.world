@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <!-- We use a custom world for the robot so that the camera angle is launched correctly -->
+
+  <world name="default">
+
+    <ignition:model_plugin_loading_timeout>60.0</ignition:model_plugin_loading_timeout>
+
+    <scene>
+    <grid>false</grid>
+    </scene>
+
+    <include>
+      <uri>model://space_terrain_plain</uri>
+       <pose>0.0 1.903278 -0.131218 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://landscape_space</uri>
+       <pose>0.0 0.0 0.0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://plant_alien</uri>
+       <pose>0 -5 0.0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://lost_astronaut</uri>
+       <pose>-12.8931 -3.78411 0.0518221 0.00138158 0.00503901 0.264414</pose>
+    </include>
+
+    <include>
+      <uri>model://alien1</uri>
+       <pose>13.463735 16.715622 0.01 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://astronaut_pro</uri>
+       <pose>-3 1.0 -0.15 0 0 0</pose>
+    </include> 
+
+    <include>
+      <uri>model://crater</uri>
+       <pose>-13 -13 -5 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://meteor</uri>
+       <pose>-13 -13 -5 0 0 0</pose>
+    </include>
+    
+
+    <light name='user_point_light_1' type='point'>
+      <pose>0.0 -8.0 25.0 0 -0 0</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>200</range>
+        <constant>0.0</constant>
+        <linear>0.0</linear>
+        <quadratic>0.0005</quadratic>
+      </attenuation>
+      <cast_shadows>0</cast_shadows>
+      <direction>0 0 -1</direction>
+    </light>
+
+    
+    <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors"></plugin>
+    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics"></plugin>
+    <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands"></plugin>
+    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster"></plugin>
+    <plugin filename="gz-sim-imu-system" name="gz::sim::systems::Imu"></plugin>
+
+  </world>
+</sdf>

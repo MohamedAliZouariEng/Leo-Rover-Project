@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 3.6.4 commit date:2023-09-25, commit time:13:24, hash:21bfc5e7fe3f</authoring_tool>
+    </contributor>
+    <created>2024-08-22T13:23:19</created>
+    <modified>2024-08-22T13:23:19</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="GridFloor01_DIFF-effect">
+      <profile_COMMON>
+        <newparam sid="GridFloor01_DIFF_baseColor_jpg-surface">
+          <surface type="2D">
+            <init_from>GridFloor01_DIFF_baseColor_jpg</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="GridFloor01_DIFF_baseColor_jpg-sampler">
+          <sampler2D>
+            <source>GridFloor01_DIFF_baseColor_jpg-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <texture texture="GridFloor01_DIFF_baseColor_jpg-sampler" texcoord="st0"/>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="GridFloor01_DIFF_baseColor_jpg" name="GridFloor01_DIFF_baseColor_jpg">
+      <init_from>GridFloor01_DIFF_baseColor.jpg</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="GridFloor01_DIFF-material" name="GridFloor01_DIFF">
+      <instance_effect url="#GridFloor01_DIFF-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="ref_tron_gridfloor_smd_GridFloor01_DIFF_0-mesh" name="ref_tron_gridfloor_smd_GridFloor01_DIFF_0">
+      <mesh>
+        <source id="ref_tron_gridfloor_smd_GridFloor01_DIFF_0-mesh-positions">
+          <float_array id="ref_tron_gridfloor_smd_GridFloor01_DIFF_0-mesh-positions-array" count="147">-20.45957 0 0.1065602 -20.45957 -10.22978 0.1065639 -10.22978 -10.22978 0.1065639 -30.68935 -10.22978 0.1065639 -20.45957 -20.45957 0.1065676 -30.68935 -20.45957 0.1065676 -30.68935 -30.68935 0.1065712 -20.45957 -30.68935 0.1065712 -10.22978 -30.68935 0.1065712 -10.22978 -20.45957 0.1065676 0 -20.45957 0.1065676 0 -30.68935 0.1065712 10.22978 -30.68935 0.1065712 10.22978 -20.45957 0.1065676 0 -10.22978 0.1065639 20.45957 20.45957 0.1065529 30.68935 10.22978 0.1065566 30.68935 20.45957 0.1065529 20.45957 10.22978 0.1065566 30.68935 0 0.1065602 20.45957 0 0.1065602 30.68935 -10.22978 0.1065639 20.45957 -10.22978 0.1065639 30.68935 -20.45957 0.1065676 20.45957 -20.45957 0.1065676 30.68935 -30.68935 0.1065712 20.45957 -30.68935 0.1065712 10.22978 -10.22978 0.1065639 0 0 0.1065602 10.22978 0 0.1065602 0 10.22978 0.1065566 -10.22978 10.22978 0.1065566 -10.22978 0 0.1065602 -20.45957 10.22978 0.1065566 -20.45957 20.45957 0.1065529 -10.22978 20.45957 0.1065529 0 20.45957 0.1065529 10.22978 10.22978 0.1065566 10.22978 20.45957 0.1065529 -30.68935 10.22978 0.1065566 -30.68935 20.45957 0.1065529 -30.68935 30.68935 0.1065493 -20.45957 30.68935 0.1065493 -10.22978 30.68935 0.1065493 0 30.68935 0.1065493 10.22978 30.68935 0.1065493 20.45957 30.68935 0.1065493 30.68935 30.68935 0.1065493 -30.68935 0 0.1065602</float_array>
+          <technique_common>
+            <accessor source="#ref_tron_gridfloor_smd_GridFloor01_DIFF_0-mesh-positions-array" count="49" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ref_tron_gridfloor_smd_GridFloor01_DIFF_0-mesh-normals">
+          <float_array id="ref_tron_gridfloor_smd_GridFloor01_DIFF_0-mesh-normals-array" count="18">0 3.57606e-7 1 0 3.57606e-7 1 0 3.57606e-7 1 0 3.57606e-7 1 0 3.57606e-7 1 0 3.57606e-7 1</float_array>
+          <technique_common>
+            <accessor source="#ref_tron_gridfloor_smd_GridFloor01_DIFF_0-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ref_tron_gridfloor_smd_GridFloor01_DIFF_0-mesh-map-0">
+          <float_array id="ref_tron_gridfloor_smd_GridFloor01_DIFF_0-mesh-map-0-array" count="432">0.9985 0.9985 0.9985 0.001999974 0.001999974 0.001999974 0.9985 0.9985 0.001999974 0.001999974 0.9985 0.001999974 0.001999974 0.001999974 0.9985 0.9985 0.9985 0.001999974 0.001999974 0.001999974 0.001999974 0.9985 0.9985 0.9985 0.9985 0.9985 0.001999974 0.9985 0.001999974 0.001999974 0.9985 0.9985 0.001999974 0.001999974 0.9985 0.001999974 0.9985 0.9985 0.9985 0.001999974 0.001999974 0.001999974 0.9985 0.9985 0.001999974 0.001999974 0.001999974 0.9985 0.9985 0.9985 0.001999974 0.9985 0.001999974 0.001999974 0.9985 0.9985 0.001999974 0.001999974 0.9985 0.001999974 0.9985 0.9985 0.9985 0.001999974 0.001999974 0.001999974 0.9985 0.9985 0.001999974 0.001999974 0.001999974 0.9985 0.9985 0.001999974 0.9985 0.9985 0.001999974 0.9985 0.001999974 0.001999974 0.9985 0.9985 0.9985 0.001999974 0.001999974 0.001999974 0.001999974 0.9985 0.9985 0.9985 0.9985 0.001999974 0.001999974 0.9985 0.001999974 0.001999974 0.9985 0.001999974 0.9985 0.9985 0.001999974 0.9985 0.9985 0.9985 0.001999974 0.001999974 0.001999974 0.9985 0.9985 0.9985 0.9985 0.001999974 0.001999974 0.001999974 0.9985 0.001999974 0.001999974 0.9985 0.001999974 0.001999974 0.9985 0.001999974 0.9985 0.9985 0.001999974 0.9985 0.9985 0.9985 0.001999974 0.001999974 0.001999974 0.9985 0.9985 0.9985 0.9985 0.001999974 0.001999974 0.001999974 0.9985 0.001999974 0.001999974 0.9985 0.001999974 0.001999974 0.9985 0.001999974 0.9985 0.9985 0.001999974 0.9985 0.9985 0.9985 0.001999974 0.001999974 0.001999974 0.9985 0.9985 0.9985 0.9985 0.001999974 0.001999974 0.001999974 0.9985 0.9985 0.001999974 0.001999974 0.9985 0.001999974 0.9985 0.9985 0.001999974 0.9985 0.001999974 0.001999974 0.001999974 0.001999974 0.001999974 0.9985 0.9985 0.9985 0.9985 0.001999974 0.001999974 0.9985 0.001999974 0.001999974 0.9985 0.9985 0.9985 0.001999974 0.001999974 0.001999974 0.9985 0.9985 0.001999974 0.001999974 0.9985 0.001999974 0.9985 0.9985 0.001999974 0.001999974 0.001999974 0.9985 0.9985 0.001999974 0.9985 0.9985 0.001999974 0.9985 0.001999974 0.001999974 0.9985 0.9985 0.9985 0.001999974 0.001999974 0.001999974 0.001999974 0.9985 0.9985 0.9985 0.9985 0.001999974 0.001999974 0.9985 0.001999974 0.001999974 0.9985 0.9985 0.9985 0.001999974 0.001999974 0.001999974 0.9985 0.9985 0.001999974 0.001999974 0.001999974 0.9985 0.9985 0.9985 0.001999974 0.9985 0.001999974 0.001999974 0.9985 0.9985 0.001999974 0.001999974 0.9985 0.001999974 0.9985 0.9985 0.9985 0.001999974 0.001999974 0.001999974 0.9985 0.001999974 0.001999974 0.9985 0.001999974 0.001999974 0.001999974 0.001999974 0.001999974 0.9985 0.9985 0.9985 0.9985 0.9985 0.001999974 0.9985 0.001999974 0.001999974 0.9985 0.9985 0.001999974 0.001999974 0.9985 0.001999974 0.001999974 0.001999974 0.9985 0.9985 0.9985 0.001999974 0.9985 0.9985 0.001999974 0.001999974 0.001999974 0.9985 0.9985 0.9985 0.001999974 0.9985 0.001999974 0.001999974 0.9985 0.9985 0.001999974 0.001999974 0.9985 0.001999974 0.001999974 0.001999974 0.9985 0.9985 0.9985 0.001999974 0.9985 0.9985 0.001999974 0.9985 0.001999974 0.001999974 0.9985 0.9985 0.001999974 0.001999974 0.001999974 0.9985 0.9985 0.001999974 0.9985 0.9985 0.001999974 0.9985 0.001999974 0.001999974 0.9985 0.9985 0.9985 0.001999974 0.9985 0.9985 0.001999974 0.001999974 0.9985 0.001999974 0.9985 0.9985 0.001999974 0.9985 0.001999974 0.001999974 0.001999974 0.001999974 0.001999974 0.9985 0.9985 0.9985 0.001999974 0.001999974 0.9985 0.9985 0.9985 0.001999974 0.9985 0.001999974 0.9985 0.9985 0.001999974 0.9985 0.9985 0.001999974 0.001999974 0.9985 0.001999974 0.001999974 0.001999974 0.001999974 0.001999974 0.9985 0.9985 0.9985 0.001999974 0.001999974 0.9985 0.9985 0.9985 0.001999974 0.9985 0.001999974 0.9985 0.9985 0.001999974 0.9985 0.9985 0.001999974 0.001999974 0.9985 0.001999974 0.001999974 0.001999974 0.001999974 0.001999974 0.9985 0.9985 0.9985 0.001999974 0.001999974 0.9985 0.9985 0.9985 0.001999974 0.9985 0.001999974 0.9985 0.9985 0.001999974 0.9985 0.9985 0.001999974 0.001999974 0.9985 0.001999974 0.001999974 0.001999974 0.001999974 0.001999974 0.9985 0.9985 0.9985 0.9985 0.9985 0.001999974 0.9985 0.001999974 0.001999974</float_array>
+          <technique_common>
+            <accessor source="#ref_tron_gridfloor_smd_GridFloor01_DIFF_0-mesh-map-0-array" count="216" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ref_tron_gridfloor_smd_GridFloor01_DIFF_0-mesh-vertices">
+          <input semantic="POSITION" source="#ref_tron_gridfloor_smd_GridFloor01_DIFF_0-mesh-positions"/>
+        </vertices>
+        <triangles material="GridFloor01_DIFF-material" count="72">
+          <input semantic="VERTEX" source="#ref_tron_gridfloor_smd_GridFloor01_DIFF_0-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ref_tron_gridfloor_smd_GridFloor01_DIFF_0-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ref_tron_gridfloor_smd_GridFloor01_DIFF_0-mesh-map-0" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 2 2 2 0 0 3 3 1 4 1 1 5 3 1 6 4 2 7 1 1 8 3 1 9 5 0 10 4 2 11 4 2 12 5 0 13 6 0 14 4 2 15 6 0 16 7 2 17 4 2 18 7 2 19 8 3 20 4 2 21 8 3 22 9 1 23 10 3 24 9 1 25 8 3 26 10 3 27 8 3 28 11 0 29 10 3 30 11 0 31 12 4 32 10 3 33 12 4 34 13 2 35 14 4 36 10 3 37 13 2 38 2 2 39 10 3 40 14 4 41 2 2 42 9 1 43 10 3 44 1 1 45 9 1 46 2 2 47 1 1 48 4 2 49 9 1 50 15 2 51 16 1 52 17 1 53 15 2 54 18 2 55 16 1 56 18 2 57 19 5 58 16 1 59 18 2 60 20 1 61 19 5 62 20 1 63 21 4 64 19 5 65 20 1 66 22 2 67 21 4 68 22 2 69 23 0 70 21 4 71 22 2 72 24 2 73 23 0 74 24 2 75 25 0 76 23 0 77 24 2 78 26 2 79 25 0 80 24 2 81 12 4 82 26 2 83 24 2 84 13 2 85 12 4 86 27 4 87 13 2 88 24 2 89 14 4 90 13 2 91 27 4 92 28 0 93 14 4 94 27 4 95 28 0 96 2 2 97 14 4 98 28 0 99 27 4 100 29 0 101 30 1 102 28 0 103 29 0 104 31 4 105 28 0 106 30 1 107 31 4 108 32 1 109 28 0 110 33 4 111 32 1 112 31 4 113 34 4 114 33 4 115 31 4 116 34 4 117 31 4 118 35 4 119 36 2 120 35 4 121 31 4 122 36 2 123 31 4 124 30 1 125 36 2 126 30 1 127 37 1 128 30 1 129 29 0 130 37 1 131 37 1 132 29 0 133 20 1 134 20 1 135 29 0 136 27 4 137 20 1 138 27 4 139 22 2 140 27 4 141 24 2 142 22 2 143 36 2 144 37 1 145 38 4 146 15 2 147 38 4 148 37 1 149 15 2 150 37 1 151 18 2 152 37 1 153 20 1 154 18 2 155 28 0 156 32 1 157 2 2 158 0 0 159 2 2 160 32 1 161 33 4 162 0 0 163 32 1 164 39 1 165 0 0 166 33 4 167 34 4 168 39 1 169 33 4 170 34 4 171 40 0 172 39 1 173 41 0 174 40 0 175 34 4 176 41 0 177 34 4 178 42 2 179 42 2 180 34 4 181 35 4 182 42 2 183 35 4 184 43 3 185 43 3 186 35 4 187 36 2 188 43 3 189 36 2 190 44 0 191 44 0 192 36 2 193 38 4 194 44 0 195 38 4 196 45 1 197 45 1 198 38 4 199 15 2 200 45 1 201 15 2 202 46 1 203 46 1 204 15 2 205 17 1 206 46 1 207 17 1 208 47 2 209 39 1 210 48 0 211 0 0 212 0 0 213 48 0 214 3 1 215</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="scene" name="scene" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node id="Materials" name="Materials" type="NODE">
+          <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        </node>
+        <node id="Meshes" name="Meshes" type="NODE">
+          <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+          <node id="Sketchfab_model" name="Sketchfab_model" type="NODE">
+            <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+            <node id="_566370f08f54e27ad57d0539afa0af7_fbx" name="_566370f08f54e27ad57d0539afa0af7_fbx" type="NODE">
+              <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+              <node id="RootNode" name="RootNode" type="NODE">
+                <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+                <node id="ref_tron_gridfloor_smd" name="ref_tron_gridfloor_smd" type="NODE">
+                  <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+                  <node id="ref_tron_gridfloor_smd_GridFloor01_DIFF_0" name="ref_tron_gridfloor_smd_GridFloor01_DIFF_0" type="NODE">
+                    <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+                    <instance_geometry url="#ref_tron_gridfloor_smd_GridFloor01_DIFF_0-mesh" name="ref_tron_gridfloor_smd_GridFloor01_DIFF_0">
+                      <bind_material>
+                        <technique_common>
+                          <instance_material symbol="GridFloor01_DIFF-material" target="#GridFloor01_DIFF-material">
+                            <bind_vertex_input semantic="st0" input_semantic="TEXCOORD" input_set="0"/>
+                          </instance_material>
+                        </technique_common>
+                      </bind_material>
+                    </instance_geometry>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

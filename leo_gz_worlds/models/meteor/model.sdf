@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<sdf version='1.4'>
+  <model name="meteor">
+      <static>0</static>
+        <link name='link_1'>
+            <visual name='visual'>
+            <visibility_flags>1</visibility_flags>
+            <pose frame=''>0 0 0 0 0 0</pose>
+            <geometry>
+            <mesh>
+                <uri>model://meteor/meshes/meteor.dae</uri>
+                <scale>1 1 1</scale>
+            </mesh>
+            </geometry>
+            <cast_shadows>0</cast_shadows>
+            <transparency>0</transparency>
+        </visual>
+
+        <!-- Simplified collisions to avoid strange behaviour when falling-->
+        <collision name='collision'>
+            <pose frame=''>0 0 0 0 0 0</pose>
+            <geometry>
+                <box size="1 1 1"/>
+            </geometry>        
+        </collision>
+
+        <inertial>
+            <!-- Set the mass of the box -->
+            <mass value="0.1"/>
+
+            <!-- Inertia matrix values for a uniform box -->
+            <!-- Ixx = Iyy = Izz = (1/12) * mass * (length^2 + height^2) -->
+            <!-- Since the box is 1m x 1m x 1m: Ixx = Iyy = Izz = (1/12) * 100 * (1^2 + 1^2) = 16.6667 -->
+            <inertia ixx="16.6667" ixy="0.0" ixz="0.0" iyy="16.6667" iyz="0.0" izz="16.6667"/>
+
+            <!-- Optionally, you can set the origin of the inertia -->
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </inertial>
+        </link>
+  </model>
+</sdf>
+

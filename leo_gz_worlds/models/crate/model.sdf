@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<sdf version='1.4'>
+  <model name="crate">
+      <static>1</static>
+        <link name='link_1'>
+            <visual name='visual'>
+            <pose frame=''>0 0 0 0 0 0</pose>
+            <geometry>
+            <mesh>
+                <uri>model://crate/meshes/crate.dae</uri>
+                <scale>2.0 2.0 2.0</scale>
+            </mesh>
+            </geometry>
+            <cast_shadows>0</cast_shadows>
+            <transparency>0</transparency>
+        </visual>
+
+        <collision name='collision'>
+            <laser_retro>0</laser_retro>
+            <pose frame=''>0 0 0 0 0 0</pose>
+            <geometry>
+            <mesh>
+                <uri>model://crate/meshes/crate.stl</uri>
+                <scale>2.0 2.0 2.0</scale>
+            </mesh>
+            </geometry>
+        </collision>
+        </link>
+  </model>
+</sdf>
+
