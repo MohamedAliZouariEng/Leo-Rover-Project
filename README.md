@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://vimeo.com/user242059085">
+    <img src="https://img.shields.io/badge/WATCH_DEMO-000000?style=for-the-badge&logo=vimeo&logoColor=1AB7EA" alt="Watch Demo on Vimeo" />
+  </a>
+</p>
+
 ## 🚜 Leo Rover Project 
 
 This repository features an exciting robotics project using the Leo Rover platform, the ROS 2 Jazzy framework, and the Gazebo Harmonic simulator. The core of this project involves integrating advanced AI models, including one inspired by NASA's work specifically for plant detection, alongside custom implementations for autonomous navigation and text recognition.
