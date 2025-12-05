@@ -39,8 +39,8 @@ def generate_launch_description():
 
     sim_world = DeclareLaunchArgument(
         "sim_world",
-        #default_value=os.path.join(pkg_project_worlds, "worlds", "space_terrain_env_simple.world"),
-        default_value=os.path.join(pkg_project_worlds, "worlds", "space_terrain_flat_env.world"),
+        default_value=os.path.join(pkg_project_worlds, "worlds", "space_terrain_env_simple.world"),
+        #default_value=os.path.join(pkg_project_worlds, "worlds", "space_terrain_flat_env.world"),
         description="Path to the Gazebo world file",
     )
 

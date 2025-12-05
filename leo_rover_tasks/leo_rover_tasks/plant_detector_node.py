@@ -19,7 +19,7 @@ class PlantDetectorNode(Node):
         
         self.bridge = CvBridge()
 
-        self.model_path = Path.home() / 'leo_ws' / 'src' / 'basic_ros2_extra_files' / 'plant_detector' / 'best_alien_plant_detector_model.pth'
+        self.model_path = Path.home() / 'leo_ws' / 'src' / 'basic_ros2_extra_files' / 'plant_detector' / 'best_plant_detector_model.pth'
 
 
         self.plant_detector = PlantDetector(model_path=self.model_path)
